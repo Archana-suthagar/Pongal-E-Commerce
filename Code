@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pongal E-Commerce</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      display: flex; /* Center the content vertically */
+      flex-direction: column;
+      min-height: 100vh; /* Make the body take up full viewport height */
+      justify-content: space-between; /* Space between header/content and footer */
+      background-color: #f0f8ff; 
+      font-family: sans-serif;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto; 
+      padding: 20px;
+      text-align: center;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+
+    .product {
+      text-align: center;
+      border: 1px solid #ddd;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 5px;
+    }
+
+    .product img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    h1, h2 {
+      color: #116933; 
+    }
+
+    p {
+      color: #333;
+    }
+
+    button {
+      background-color: #90EE90;
+      color: #116933;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .top-box {
+      background-color: #d3eace; 
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    header, footer {
+      background-color: #d3eace; /* Light green for top and bottom */
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer {
+      margin-top: auto; /* Push footer to the bottom */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Happy Pongal! 🎉</h1>
+    <p>Get exclusive discounts on traditional Pongal products!</p>
+  </header>
+
+  <div class="container">
+    <div class="top-box">
+      <h2>Pongal Special Offers</h2>
+      <p>Available for a limited time only!</p>
+    </div>
+
+    <section class="products">
+      <div class="product" id="product1">
+        <img src="sweet-pongal-recipe-1.jpg" alt="Pongal Sweet">
+        <h2>Pongal Sweet Box</h2>
+        <p>₹299</p>
+        <button onclick="addToCart('Pongal Sweet Box', 299)">Add to Cart</button>
+      </div>
+      <div class="product" id="product2">
+        <img src="sugarcane.jfif" alt="Sugarcane">
+        <h2>Fresh Sugarcane</h2>
+        <p>₹149</p>
+        <button onclick="addToCart('Fresh Sugarcane', 149)">Add to Cart</button>
+      </div>
+      <div class="product" id="product3">
+        <img src="gbox.jfif" alt="Gift Box">
+        <h2>Gift Box</h2>
+        <p>₹149</p>
+        <button onclick="addToCart('Gift Box', 149)">Add to Cart</button>
+      </div>
+      <div class="product" id="product4"> 
+        <img src="flower.webp" alt="flowers">
+        <h2>Flowers</h2>
+        <p>₹99</p>
+        <button onclick="addToCart('Flowers', 99)">Add to Cart</button>
+      </div>
+      <div class="product" id="product5">
+        <img src="colour.webp" alt="Color Podi">
+        <h2>Color Podi</h2>
+        <p>₹79</p>
+        <button onclick="addToCart('Color Podi', 79)">Add to Cart</button>
+      </div>
+      <div class="product" id="product6">
+        <img src="mango leaves.webp" alt="Mango Leaves">
+        <h2>Mango Leaves</h2>
+        <p>₹59</p>
+        <button onclick="addToCart('Mango Leaves', 59)">Add to Cart</button>
+      </div>
+    </section>
+
+    <section class="gift-guide">
+      <h2>🎁 Pongal Gift Guide</h2>
+      <p>Surprise your loved ones with our special Pongal gift hampers!</p>
+    </section>
+
+    <section class="cart">
+      <h2>🛒 Shopping Cart</h2>
+      <ul id="cart-items"></ul>
+      <p>Total: ₹<span id="cart-total">0</span></p>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>Contact Us:</p>
+    <p>Phone: +91 123 456 7890</p>
+    <p>Email: info@pongalstore.com</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
